@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dressing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+        #gameContainer {
+            margin-top: 50px;
+        }
+        .clothes {
+            margin: 10px;
+            cursor: pointer;
+        }
+        .character {
+            width: 200px;
+            height: 400px;
+            background-color: #e0e0e0;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        #head {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #ffcc99;
+        }
+        #body {
+            position: absolute;
+            top: 100px;
+            width: 100%;
+            height: 250px;
+            background-color: #ffffff;
+        }
+        #pants {
+            position: absolute;
+            top: 250px;
+            width: 100%;
+            height: 150px;
+            background-color: #b0c4de;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dressing Game</h1>
+
+    <div id="gameContainer">
+        <div class="character" id="character">
+            <div id="head"></div>
+            <div id="body"></div>
+            <div id="pants"></div>
+        </div>
+
+        <div>
+            <h3>Select a Head</h3>
+            <img src="head1.png" alt="Head 1" class="clothes" id="head1">
+            <img src="head2.png" alt="Head 2" class="clothes" id="head2">
+
+            <h3>Select a Body</h3>
+            <img src="shirt1.png" alt="Shirt 1" class="clothes" id="shirt1">
+            <img src="shirt2.png" alt="Shirt 2" class="clothes" id="shirt2">
+
+            <h3>Select Pants</h3>
+            <img src="pants1.png" alt="Pants 1" class="clothes" id="pants1">
+            <img src="pants2.png" alt="Pants 2" class="clothes" id="pants2">
+        </div>
+    </div>
+
+    <script>
+        // Function to change the character's head
+        document.getElementById('head1').onclick = function() {
+            document.getElementById('head').style.backgroundImage = "url('head1.png')";
+        };
+        document.getElementById('head2').onclick = function() {
+            document.getElementById('head').style.backgroundImage = "url('head2.png')";
+        };
+
+        // Function to change the character's body
+        document.getElementById('shirt1').onclick = function() {
+            document.getElementById('body').style.backgroundImage = "url('shirt1.png')";
+        };
+        document.getElementById('shirt2').onclick = function() {
+            document.getElementById('body').style.backgroundImage = "url('shirt2.png')";
+        };
+
+        // Function to change the character's pants
+        document.getElementById('pants1').onclick = function() {
+            document.getElementById('pants').style.backgroundImage = "url('pants1.png')";
+        };
+        document.getElementById('pants2').onclick = function() {
+            document.getElementById('pants').style.backgroundImage = "url('pants2.png')";
+        };
+    </script>
+
+</body>
+</html>
